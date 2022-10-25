@@ -1,0 +1,52 @@
+name: Module 00
+
+on:
+  push:
+    branches: 
+    - "module-00"
+  
+  pull_request:
+    branches:
+    - "main"
+
+jobs:
+
+  Ubuntu-Exercise-00:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex00
+
+    - name: Exercise 00
+      run: make -C module-00/ex00 test
+
+
+
+  MacOS-Exercise-00:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex00
+
+    - name: Exercise 00
+      run: make -C module-00/ex00 test
+
+
+
+  Windows-Exercise-00:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex00
+
+    - name: Exercise 00
+      run: make -C module-00/ex00 test
