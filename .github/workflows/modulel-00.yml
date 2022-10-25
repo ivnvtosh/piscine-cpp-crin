@@ -35,6 +35,18 @@ jobs:
     - name: Exercise 01
       run: make -C module-00/ex01 test
 
+  Ubuntu-Exercise-02:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex02
+
+    - name: Exercise 02
+      run: make -C module-00/ex02 test
+
 
 
   MacOS-Exercise-00:
@@ -61,6 +73,18 @@ jobs:
     - name: Exercise 01
       run: make -C module-00/ex01 test
 
+  MacOS-Exercise-02:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex02
+
+    - name: Exercise 02
+      run: make -C module-00/ex02 test
+
 
 
   Windows-Exercise-00:
@@ -86,3 +110,15 @@ jobs:
 
     - name: Exercise 01
       run: make -C module-00/ex01 test
+
+  Windows-Exercise-02:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: make -C module-00/ex02
+
+    - name: Exercise 02
+      run: make -C module-00/ex02 test
